@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - Shayna Mae E. Del Valle</title>
+    <meta http-equiv="refresh" content="0; url=index.html?from=skills">
+    <script>window.location.replace('index.html?from=skills&t=' + Date.now());</script>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Background Pattern -->
+    <div class="background-pattern"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-briefcase"></i> Shayna Mae Del Valle
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="skills.html" class="nav-link active">Skills</a></li>
+                <li><a href="education.html" class="nav-link">Education</a></li>
+                <li><a href="work.html" class="nav-link">Work</a></li>
+                <li><a href="experience.html" class="nav-link">Experience</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ===== SKILLS SECTION ===== -->
+    <section class="skills page-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Skills & Competencies</h2>
+                <p class="section-subtitle">Tools & Expertise I Master</p>
+            </div>
+
+            <div class="skills-grid">
+                <!-- Virtual Assistance & Administrative -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>Virtual Assistance & Administrative</h3>
+                    <ul>
+                        <li>Administrative Support</li>
+                        <li>Calendar & Email Management</li>
+                        <li>Data Entry & Documentation</li>
+                        <li>Internet Research</li>
+                        <li>File Management</li>
+                        <li>Project Coordination</li>
+                    </ul>
+                </div>
+
+                <!-- CRM & Sales -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>CRM & Sales</h3>
+                    <ul>
+                        <li>GoHighLevel CRM</li>
+                        <li>Buildium</li>
+                        <li>Lead Generation</li>
+                        <li>Appointment Setting</li>
+                        <li>Cold Calling</li>
+                        <li>Pipeline Management</li>
+                    </ul>
+                </div>
+
+                <!-- Real Estate -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Real Estate</h3>
+                    <ul>
+                        <li>Property Research</li>
+                        <li>Land ID</li>
+                        <li>LandInsight</li>
+                        <li>Redfin</li>
+                        <li>Property Data Scrubbing</li>
+                        <li>Investor Lead Generation</li>
+                    </ul>
+                </div>
+
+                <!-- Marketing -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3>Marketing</h3>
+                    <ul>
+                        <li>Meta Ads Manager</li>
+                        <li>Digital Marketing Support</li>
+                        <li>Lead Management</li>
+                        <li>Sales Funnel Setup</li>
+                        <li>Workflow Automation</li>
+                    </ul>
+                </div>
+
+                <!-- Property Management -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Property Management</h3>
+                    <ul>
+                        <li>Tenant Management</li>
+                        <li>Rent Collection & Tracking</li>
+                        <li>Lease Management</li>
+                        <li>Maintenance Coordination</li>
+                        <li>Financial Reporting</li>
+                        <li>Buildium Management</li>
+                    </ul>
+                </div>
+
+                <!-- Travel & Hospitality -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <h3>Travel & Hospitality</h3>
+                    <ul>
+                        <li>Amadeus GDS</li>
+                        <li>Flight Reservations</li>
+                        <li>Hotel Booking</li>
+                        <li>Travel Planning</li>
+                        <li>Itinerary Management</li>
+                        <li>Airbnb Management</li>
+                    </ul>
+                </div>
+
+                <!-- Productivity Tools -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3>Productivity Tools</h3>
+                    <ul>
+                        <li>Google Workspace</li>
+                        <li>Google Calendar</li>
+                        <li>Gmail</li>
+                        <li>Microsoft Office</li>
+                        <li>Microsoft Excel</li>
+                        <li>Microsoft Word</li>
+                    </ul>
+                </div>
+
+                <!-- Customer Service -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li>Phone Support</li>
+                        <li>Email Communication</li>
+                        <li>Chat Support</li>
+                        <li>Patient Coordination</li>
+                        <li>Guest Management</li>
+                        <li>Appointment Scheduling</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Set active nav link based on current page
+        function setActiveNav() {
+            const currentPage = window.location.pathname.split('/').pop();
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+        }
+        setActiveNav();
+    </script>
+</body>
+</html>

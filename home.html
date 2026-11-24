@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Operations &amp; Automation Portfolio</title>
+    <meta http-equiv="refresh" content="0; url=index.html?from=home">
+    <script>window.location.replace('index.html?from=home&t=' + Date.now());</script>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-briefcase" aria-label="Virtual assistant portfolio"></i>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="skills.html" class="nav-link">Skills</a></li>
+                <li><a href="education.html" class="nav-link">Education</a></li>
+                <li><a href="work.html" class="nav-link">Work</a></li>
+                <li><a href="experience.html" class="nav-link">Experience</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ===== HOME SECTION ===== -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h2>Hi There,</h2>
+                <h1>I'm <span class="highlight">Shy</span></h1>
+                            <h3 class="job-title">General Virtual Assistant</h3>
+                <p class="subtitle typing-text">Specialized in GoHighLevel automation, digital operations, and administrative support</p>
+            </div>
+            <div class="social-links" aria-label="Contact links">
+                <a href="https://www.linkedin.com/in/shayna-del-valle-5985b3243/" class="social-icon" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="mailto:delvalleshaynamae@gmail.com" class="social-icon" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const typingLines = document.querySelectorAll('.typing-text');
+
+        typingLines.forEach((line, lineIndex) => {
+            const message = line.textContent.trim();
+            let characterIndex = 0;
+            let deleting = false;
+
+            const typeLoop = () => {
+                line.textContent = message.slice(0, characterIndex);
+
+                if (!deleting && characterIndex < message.length) {
+                    characterIndex += 1;
+                    setTimeout(typeLoop, 55);
+                    return;
+                }
+
+                if (!deleting) {
+                    deleting = true;
+                    setTimeout(typeLoop, 1800 + lineIndex * 400);
+                    return;
+                }
+
+                if (characterIndex > 0) {
+                    characterIndex -= 1;
+                    setTimeout(typeLoop, 30);
+                    return;
+                }
+
+                deleting = false;
+                setTimeout(typeLoop, 500);
+            };
+
+            setTimeout(typeLoop, lineIndex * 700);
+        });
+    </script>
+

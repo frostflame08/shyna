@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Shayna Mae E. Del Valle</title>
+    <meta http-equiv="refresh" content="0; url=index.html?from=about">
+    <script>window.location.replace('index.html?from=about&t=' + Date.now());</script>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Background Pattern -->
+    <div class="background-pattern"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-briefcase"></i> Shayna Mae Del Valle
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link active">About</a></li>
+                <li><a href="skills.html" class="nav-link">Skills</a></li>
+                <li><a href="education.html" class="nav-link">Education</a></li>
+                <li><a href="work.html" class="nav-link">Work</a></li>
+                <li><a href="experience.html" class="nav-link">Experience</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section class="about page-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Me</h2>
+                <p class="section-subtitle">Professional Background & Expertise</p>
+            </div>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-intro">
+                        Highly organized and results-driven Virtual Assistant with <strong>6+ years of experience</strong> supporting businesses across multiple industries. I specialize in administrative support, lead generation, appointment setting, CRM management, customer service, and workflow automation.
+                    </p>
+                    
+                    <div class="about-details">
+                        <h3>Industries & Experience</h3>
+                        <ul class="industries-list">
+                            <li><i class="fas fa-check"></i> Healthcare</li>
+                            <li><i class="fas fa-check"></i> Real Estate</li>
+                            <li><i class="fas fa-check"></i> Marketing</li>
+                            <li><i class="fas fa-check"></i> Property Management</li>
+                            <li><i class="fas fa-check"></i> Travel & Tourism</li>
+                        </ul>
+
+                        <h3>Core Strengths</h3>
+                        <ul class="strengths-list">
+                            <li><i class="fas fa-star"></i> Administrative Support & Organization</li>
+                            <li><i class="fas fa-star"></i> Lead Generation & Appointment Setting</li>
+                            <li><i class="fas fa-star"></i> CRM Management & Database Administration</li>
+                            <li><i class="fas fa-star"></i> Workflow Automation & Process Optimization</li>
+                            <li><i class="fas fa-star"></i> Customer Service & Client Coordination</li>
+                            <li><i class="fas fa-star"></i> Project Management & Timelines</li>
+                        </ul>
+                    </div>
+
+                    <p class="about-closing">
+                        Skilled at managing multiple projects simultaneously, maintaining accurate records, and providing exceptional client support in fast-paced remote environments. I'm dedicated to helping businesses streamline operations and achieve their goals.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Set active nav link based on current page
+        function setActiveNav() {
+            const currentPage = window.location.pathname.split('/').pop();
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+        }
+        setActiveNav();
+    </script>
+</body>
+</html>
