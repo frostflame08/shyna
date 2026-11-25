@@ -1,13 +1,17 @@
 SHAYNA MAE E. DEL VALLE
 Digital Operations & Automation Specialist
 Santa Maria, Bulacan, Philippines
-WhatsApp: Contact via portfolio
+Phone / WhatsApp: +63 935 333 3306
 Email: delvalleshaynamae@gmail.com
 LinkedIn: https://www.linkedin.com/in/shayna-del-valle-5985b3243/
 Portfolio: https://frostflame08.github.io/ShyPortfolio/
 
 PROFESSIONAL SUMMARY
-Digital Operations & Automation Specialist with a diverse background in administrative support, CRM management, digital marketing, and business operations. Experienced in GoHighLevel systems, automated workflows, lead nurturing, appointment booking, digital advertising support, and AI-powered business solutions. Combines strong administrative and organizational capabilities with hands-on digital operations experience.
+Digital Operations & Automation Specialist with 5+ years of professional experience across executive assistance, CRM management, marketing operations, and business administration.
+
+Experienced in GoHighLevel automation, lead nurturing, appointment booking, digital advertising support, AI-powered customer engagement, and marketing conversion tracking.
+
+Combines strong organizational, communication, and problem-solving skills with hands-on experience in managing multiple client accounts, streamlining business processes, and supporting international teams across healthcare, real estate, hospitality, and digital marketing.
 
 CORE EXPERTISE
 Administrative support and correspondence | GoHighLevel CRM and workflow automation | Lead nurturing and appointment booking | Email and SMS campaigns | Digital advertising operations support | Conversion tracking and marketing analytics | AI chatbot configuration | Landing pages and lead generation funnels | Business operations and project coordination | SOPs, workflow testing, and quality assurance
@@ -15,28 +19,44 @@ Administrative support and correspondence | GoHighLevel CRM and workflow automat
 PROFESSIONAL EXPERIENCE
 
 GoHighLevel CRM & Automation Specialist | October 2024 - June 2026
-- Built landing pages, sales funnels, and lead-nurturing workflows; configured calendars, forms, pipelines, contacts, and opportunities and assisted clients with setup.
+- Built landing pages and sales funnels using GoHighLevel.
+- Configured calendars, forms, pipelines, CRM contacts, opportunities, and automated lead-nurturing workflows.
+- Managed CRM records and supported clients with GoHighLevel setup and optimization.
 
 B2B Lead Generation & Appointment Setter | December 2025 - April 2026
-- Conducted outbound calls, qualified prospects, scheduled sales appointments, updated CRM follow-ups, and met daily call, appointment, and lead-generation KPIs.
+- Conducted outbound calls and qualified prospects through decision-maker identification.
+- Scheduled sales appointments and maintained lead, follow-up, and CRM records.
+- Followed up with prospects through phone, email, and SMS while meeting daily activity and appointment KPIs.
 
 Healthcare Marketing & Patient Coordinator | February 2025 - March 2026
-- Managed patient inquiries, scheduling, CRM records, and phone, email, and SMS follow-ups; supported Meta Ads lead follow-up and improved appointment scheduling and patient communication.
-
-Real Estate Virtual Assistant | November 2023 - December 2025
-- Generated and qualified leads, scheduled appointments, researched and verified property data using Land ID, LandInsight, and Redfin, maintained CRM pipelines, and supported property and guest communications.
+- Managed patient inquiries, appointment scheduling, CRM records, and follow-up communications.
+- Supported Meta Ads lead follow-up and coordinated patient communication across phone, email, and SMS.
+- Improved appointment coordination and supported consistent patient outreach.
 
 Travel Consultant | September 2025 - February 2026
-- Booked domestic and international flights using Amadeus GDS; arranged hotels, itineraries, reservations, and travel documents and assisted with booking changes.
+- Booked domestic and international flights using Amadeus GDS.
+- Arranged hotels, travel itineraries, reservations, confirmations, and travel documents.
+- Assisted clients with booking changes and maintained accurate travel records.
+
+Real Estate Virtual Assistant | November 2023 - December 2025
+- Generated and qualified seller and investor leads and scheduled acquisition appointments.
+- Researched properties using Land ID, LandInsight, and Redfin and verified lead-generation data.
+- Maintained CRM pipelines and supported property and guest communications.
 
 Property Manager | September 2021 - October 2025
-- Managed tenant and lease operations, rent tracking, maintenance, inspections, vendors, and financial reporting using Buildium while ensuring tenant satisfaction and property upkeep.
-
-Vacation Rental Virtual Front Desk & Property Manager | September 2021 - April 2022
-- Managed Airbnb listings, bookings, calendars, and guest communications; coordinated check-ins, vendors, maintenance, and daily operations while maintaining guest satisfaction.
+- Managed residential and commercial property operations, tenant coordination, and property upkeep.
+- Used Buildium for rent tracking, lease management, maintenance coordination, and financial reporting.
+- Oversaw rent collection, inspections, vendor coordination, and outstanding balances.
 
 Operations Manager | April 2022 - October 2024
-- Managed remote VA operations, recruitment, onboarding, training, client coordination, SOPs, KPIs, scheduling, and quality assurance; developed SOPs to improve efficiency and support project success.
+- Managed daily operations for a remote virtual assistant team.
+- Supervised recruitment, onboarding, staff training, scheduling, quality assurance, and team performance.
+- Developed SOPs and monitored KPIs and client project requirements.
+
+Vacation Rental Virtual Front Desk & Property Manager | September 2021 - April 2022
+- Managed Airbnb listings, pricing, calendars, reservations, and guest communications.
+- Coordinated check-ins, check-outs, cleaners, maintenance personnel, and vendors.
+- Resolved guest concerns and supported smooth operations across multiple rental properties.
 
 SELECTED PROJECT EXPERIENCE
 - CRM automation and database reactivation: segmented contact journeys, appointment booking, reminders, email/SMS follow-up, and opt-out handling.
