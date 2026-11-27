@@ -445,6 +445,39 @@
             </div>
         </section>
 
+        <section class="page-section">
+            <div class="container">
+                <div class="section-heading">
+                    <h2>GoHighLevel automation spotlight</h2>
+                    <p>A closer look at a hands-on CRM workflow, shown separately from the selected project cards.</p>
+                </div>
+                <article class="project-card workflow-feature-card">
+                    <div class="workflow-feature-copy">
+                        <span class="project-type">GoHighLevel / CRM automation</span>
+                        <h3>Chadstone Enquiry Automation</h3>
+                        <p>A complex CRM automation workflow featuring lead management, conditional branching, contact preferences, opportunity creation, internal notifications, SMS and email automation, and automated follow-up sequences.</p>
+                    </div>
+                    <div class="workflow-feature-preview">
+                        <div class="workflow-preview">
+                            <div class="workflow-preview__viewport">
+                                <iframe
+                                    id="workflow-preview-viewer"
+                                    class="workflow-viewer workflow-viewer--preview"
+                                    title="Compact preview of the Chadstone Enquiry Automation workflow"
+                                    loading="lazy"
+                                    referrerpolicy="no-referrer"
+                                ></iframe>
+                                <p class="workflow-preview__status" id="workflow-preview-status" role="status">Loading workflow preview…</p>
+                            </div>
+                        </div>
+                        <div class="workflow-actions">
+                            <button class="button button-primary workflow-open" id="workflow-open" type="button" disabled>View Full Workflow</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
         <section class="page-section" id="experience">
             <div class="container">
                 <div class="section-heading">
@@ -540,6 +573,26 @@
             <a href="#home">Back to top ↑</a>
         </div>
     </footer>
+    <div class="workflow-modal" id="workflow-modal" role="dialog" aria-modal="true" aria-labelledby="workflow-modal-title" hidden>
+        <div class="workflow-modal__toolbar">
+            <h2 id="workflow-modal-title">Chadstone Enquiry Automation</h2>
+            <div class="workflow-modal__controls" aria-label="Workflow viewer controls">
+                <button class="workflow-control" type="button" data-workflow-action="zoom-out" aria-label="Zoom out" title="Zoom out">−</button>
+                <button class="workflow-control" type="button" data-workflow-action="zoom-in" aria-label="Zoom in" title="Zoom in">+</button>
+                <button class="workflow-control workflow-control--reset" type="button" data-workflow-action="reset" aria-label="Reset view" title="Reset view">Reset</button>
+                <button class="workflow-control workflow-control--close" type="button" data-workflow-action="close" aria-label="Close workflow viewer" title="Close">Close</button>
+            </div>
+        </div>
+        <div class="workflow-modal__canvas">
+            <iframe
+                id="workflow-modal-viewer"
+                class="workflow-viewer workflow-viewer--modal"
+                title="Interactive Chadstone Enquiry Automation workflow"
+                referrerpolicy="no-referrer"
+            ></iframe>
+            <p class="workflow-modal__status" id="workflow-modal-status" role="status">Loading interactive workflow…</p>
+        </div>
+    </div>
     <script>
         document.getElementById('current-year').textContent = new Date().getFullYear();
 
@@ -580,6 +633,148 @@
                 });
             }
         }
+
+        const workflowPreviewFrame = document.getElementById('workflow-preview-viewer');
+        const workflowModalFrame = document.getElementById('workflow-modal-viewer');
+        const workflowStatus = document.getElementById('workflow-preview-status');
+        const workflowModalStatus = document.getElementById('workflow-modal-status');
+        const workflowOpenButton = document.getElementById('workflow-open');
+        const workflowModal = document.getElementById('workflow-modal');
+        const workflowCloseButton = workflowModal.querySelector('[data-workflow-action="close"]');
+        const drawioOrigin = 'https://embed.diagrams.net';
+        const drawioEmbedUrl = `${drawioOrigin}/?embed=1&proto=json&chrome=0&lightbox=1&toolbar=0&spin=Loading+workflow`;
+        const workflowViewbox = { x: 0, y: 0, width: 3370, height: 6510, border: 16 };
+        let workflowXml = '';
+        let previewLoaded = false;
+        let modalLoaded = false;
+
+        function centerWorkflow(frame, bounds) {
+            if (!bounds || !Number.isFinite(bounds.width)) return;
+            const canvas = frame.parentElement;
+            const offset = Math.max(0, (canvas.clientWidth - bounds.width) / 2 - (bounds.x || 0));
+            frame.style.transform = `translateX(${offset}px)`;
+        }
+
+        function sendWorkflowMessage(frame, message) {
+            if (frame.contentWindow) {
+                frame.contentWindow.postMessage(JSON.stringify(message), drawioOrigin);
+            }
+        }
+
+        function showWorkflowError(error) {
+            console.error('Unable to load the Chadstone workflow viewer.', error);
+            workflowStatus.textContent = 'The workflow preview could not be loaded. Please try again later.';
+            workflowStatus.hidden = false;
+            workflowOpenButton.disabled = true;
+        }
+
+        window.addEventListener('message', (event) => {
+            if (event.origin !== drawioOrigin) return;
+            const isPreview = event.source === workflowPreviewFrame.contentWindow;
+            const isModal = event.source === workflowModalFrame.contentWindow;
+            if (!isPreview && !isModal) return;
+
+            let message = event.data;
+            if (typeof message === 'string') {
+                try {
+                    message = JSON.parse(message);
+                } catch (error) {
+                    showWorkflowError(error);
+                    return;
+                }
+            }
+
+            if (message.event === 'init') {
+                const frame = isPreview ? workflowPreviewFrame : workflowModalFrame;
+                sendWorkflowMessage(frame, {
+                    action: 'load',
+                    xml: workflowXml,
+                    viewbox: workflowViewbox,
+                    title: 'Chadstone Enquiry Automation',
+                    zoomEvents: true
+                });
+            } else if (message.event === 'load') {
+                centerWorkflow(isPreview ? workflowPreviewFrame : workflowModalFrame, message.bounds);
+                if (isPreview) {
+                    previewLoaded = true;
+                    workflowStatus.hidden = true;
+                    workflowOpenButton.disabled = false;
+                } else {
+                    modalLoaded = true;
+                    workflowModalStatus.hidden = true;
+                }
+            } else if (message.error) {
+                const error = new Error(message.error);
+                if (isPreview) {
+                    showWorkflowError(error);
+                } else {
+                    console.error('Unable to load the full Chadstone workflow viewer.', error);
+                    workflowModalStatus.textContent = 'The interactive workflow could not be loaded. Close the viewer and try again later.';
+                    workflowModalStatus.hidden = false;
+                }
+            } else if (message.event === 'zoom' || message.event === 'viewbox') {
+                centerWorkflow(isPreview ? workflowPreviewFrame : workflowModalFrame, message.bounds);
+            }
+        });
+
+        fetch('FlowChart.drawio')
+            .then((response) => {
+                if (!response.ok) throw new Error(`Workflow source request failed (${response.status}).`);
+                return response.text();
+            })
+            .then((xml) => {
+                if (!xml.includes('<mxfile')) throw new Error('The workflow source is not a valid Draw.io file.');
+                workflowXml = xml;
+                workflowPreviewFrame.src = drawioEmbedUrl;
+            })
+            .catch(showWorkflowError);
+
+        function openWorkflow() {
+            if (!previewLoaded) return;
+            workflowModal.hidden = false;
+            document.body.classList.add('workflow-modal-open');
+            if (!workflowModalFrame.src) {
+                workflowModalFrame.src = drawioEmbedUrl;
+            } else if (modalLoaded) {
+                requestAnimationFrame(() => sendWorkflowMessage(workflowModalFrame, { action: 'viewbox', viewbox: workflowViewbox }));
+            }
+            workflowCloseButton.focus();
+        }
+
+        function closeWorkflow() {
+            if (workflowModal.hidden) return;
+            workflowModal.hidden = true;
+            document.body.classList.remove('workflow-modal-open');
+            workflowOpenButton.focus();
+        }
+
+        workflowOpenButton.addEventListener('click', openWorkflow);
+        workflowModal.addEventListener('click', (event) => {
+            if (event.target === workflowModal) closeWorkflow();
+        });
+        workflowModal.querySelectorAll('[data-workflow-action]').forEach((button) => {
+            button.addEventListener('click', () => {
+                const action = button.dataset.workflowAction;
+                if (action === 'close') {
+                    closeWorkflow();
+                } else if (action === 'reset') {
+                    sendWorkflowMessage(workflowModalFrame, { action: 'viewbox', viewbox: workflowViewbox });
+                } else {
+                    sendWorkflowMessage(workflowModalFrame, {
+                        action: 'invokeAction',
+                        actionName: action === 'zoom-in' ? 'zoomIn' : 'zoomOut'
+                    });
+                }
+            });
+        });
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && !workflowModal.hidden) closeWorkflow();
+        });
+        window.addEventListener('resize', () => {
+            if (!workflowModal.hidden && modalLoaded) {
+                sendWorkflowMessage(workflowModalFrame, { action: 'viewbox', viewbox: workflowViewbox });
+            }
+        });
     </script>
 </body>
 </html>
