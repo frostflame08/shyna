@@ -764,6 +764,31 @@ summary:focus-visible {
     display: none;
 }
 
+.workflow-modal__watermark {
+    position: absolute;
+    inset: -18%;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(4, minmax(0, 1fr));
+    place-items: center;
+    overflow: hidden;
+    transform: rotate(-24deg);
+    pointer-events: none;
+    user-select: none;
+}
+
+.workflow-modal__watermark span {
+    color: rgba(86, 64, 49, 0.24);
+    font-family: "DM Sans", Arial, sans-serif;
+    font-size: clamp(0.9rem, 2.4vw, 1.6rem);
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.55);
+}
+
 .workflow-viewer--modal {
     pointer-events: auto;
 }
