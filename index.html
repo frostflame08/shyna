@@ -723,7 +723,7 @@
             }
         });
 
-        fetch('FlowChart.drawio')
+        fetch('FlowChart.drawio?v=c1e6f33')
             .then((response) => {
                 if (!response.ok) throw new Error(`Workflow source request failed (${response.status}).`);
                 return response.text();
@@ -731,6 +731,7 @@
             .then((xml) => {
                 if (!xml.includes('<mxfile')) throw new Error('The workflow source is not a valid Draw.io file.');
                 workflowXml = xml;
+                workflowOpenButton.disabled = false;
                 workflowPreviewFrame.src = drawioEmbedUrl;
             })
             .catch(showWorkflowError);
